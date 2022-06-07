@@ -1,0 +1,598 @@
+@media only screen and (max-device-width: 1300px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+
+  .malakartica{
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .prikaz{
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+  }
+}
+
+@media only screen and (min-device-width: 1301px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-device-width: 800px) {
+    .hide-mobile-smol {
+      display: none !important;
+    }
+
+    .aboutus,
+    .howit {
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: solid black !important;
+    }
+  
+    .title {
+      font-size: 4rem !important;
+    }
+  
+    .ara{
+        margin-top: 30% !important;
+        margin-bottom: 30% !important;
+      
+    }
+	
+	body.active .page .sidebar {
+	  left: -100vw !important;
+	}
+	
+	.page .sidebar {
+		width: 100vw !important;
+		padding-top: 15vw !important;
+	}
+	
+	
+}
+
+@media only screen and (min-device-width: 801px) {
+    .show-mobile-smol {
+      display: none !important;
+    }
+
+}
+
+@font-face {
+  font-family: "test";
+  src: url(FredokaOne-Regular.ttf);
+}
+
+:root {
+  --glavnaboja: #5c4033;
+  --boja2: #be9d6a;
+  --boja3: #8e28b6;
+  --bojaslova: white;
+  --sliderboja: rgb(216, 216, 216);
+  --velikitextboja: rgb(217, 179, 130);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  text-align: center;
+  overflow-x: hidden;
+}
+.page .sidebar {
+  padding-top: 5vw;
+  background: var(--glavnaboja);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.page .content {
+  margin-left: 250px;
+  transition: all 0.3s ease;
+}
+
+.navigationBar {
+  background-color: var(--glavnaboja);
+  height: 75px !important;
+  position: fixed !important;
+  width: 100%;
+  z-index: 999 !important;
+  transition: 0.5s;
+}
+
+.sidebarToggle {
+  font-size: 16px;
+  color: rgb(0, 0, 0, 0.8);
+  z-index: 999;
+  border-radius: 50px;
+
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.sidebarToggle:hover {
+  color: var(--bojaslova);
+}
+
+.page .content .container {
+  background: #fff;
+  padding: 50px;
+  line-height: 28px;
+}
+
+
+body.active .page .sidebar {
+  left: -250px;
+}
+
+body.active .page .content {
+  margin-left: 0;
+  /*width: 100%;	*/
+}
+
+.button {
+  transition-duration: 0.4s;
+  width: 100%;
+  height: 50px;
+  background-color: var(--glavnaboja);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid var(--bojaslova);
+}
+
+.button:hover {
+  background-color: #36261e;
+}
+
+.BotunSlova {
+  color: var(--bojaslova);
+  font-size: 24px;
+}
+
+.fa-bars,
+.fa-sign-in-alt {
+  font-size: 32px;
+  color: var(--bojaslova);
+}
+
+.prikzivotinja,
+.loginstranica,
+.dodavanjeobjekata {
+  display: none;
+}
+
+.prikzivotinja,
+.dodavanjeobjekata {
+  padding-top: 5%;
+}
+
+.card {
+  text-align: left;
+  width: 300px;
+  display: inline-block !important;
+  margin: 10px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.card p {
+  margin: 0;
+}
+
+.card-img-top {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+
+  -webkit-filter: brightness(90%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.card-img-top:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.modal-dialog {
+  position: fixed;
+  font-size: 15px;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("slikezazivotinje/main.png");
+
+  /* Set a specific height */
+  min-height: 1000px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 777;
+}
+
+.parallax-smol {
+  /* The image used */
+  background-image: url("slikezazivotinje/cat.jpg");
+
+  /* Set a specific height */
+  min-height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  margin: none;
+  padding: none;
+  z-index: 777;
+}
+
+.howit {
+  padding-top: 25px !important;
+  border-right: black solid;
+}
+
+.aboutus {
+  border-left: black solid;
+}
+
+/* .aboutus div{ */
+/* margin: 0; */
+/* } */
+
+.ara {
+  padding: auto !important;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+  width: 90% !important;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
+    0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
+    0 32px 16px rgba(0, 0, 0, 0.09) !important;
+  border: solid --boja2;
+  background-color: #f5f5dd;
+}
+
+.pre_ara {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+}
+
+p.text1 {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+p.text2 {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+/*hover za parallax*/
+.hover11 {
+  -webkit-filter: brightness(90%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.hover11.active {
+  -webkit-filter: brightness(50%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/*hoiver za manji parallax*/
+.hover12 {
+  -webkit-filter: brightness(80%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.hover12:hover {
+  -webkit-filter: brightness(50%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.opis {
+  font-size: 18px;
+  padding: 15px;
+}
+.modal-title {
+  font-size: 35px;
+  color: var(--bojaslova) !important;
+}
+.modal-header {
+  background-color: var(--glavnaboja);
+  color: var(--bojaslova);
+}
+
+.btn-primary {
+  background-color: var(--glavnaboja) !important;
+  border: none !important;
+}
+
+.centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 350px !important;
+  height: 350px !important;
+  transform: translate(-50%, -50%);
+  z-index: 888;
+}
+
+.centered img {
+  max-width: 100%;
+}
+
+.row {
+  z-index: 444;
+}
+
+.title {
+  font-family: test;
+  font-size: 5em;
+}
+
+#rezervirajforma {
+  display: inline-block;
+  width: 100% !important;
+}
+
+#datepicker {
+  z-index: 99999 !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none !important;
+  background-color: var(--boja2) !important;
+  margin: 0 !important;
+  font: inherit !important;
+  color: currentColor !important;
+  width: 20px !important;
+  height: 20px !important;
+  border: none !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background-color: var(--boja2);
+  width: 10px;
+  height: 20px;
+}
+
+.filteri form {
+  text-align: right;
+  width: 80%;
+  margin: auto;
+  border: solid var(--glavnaboja) 2px;
+  border-radius: 10px;
+  padding: 20px;
+  position: sticky;
+  top: 10%;
+}
+
+.filteri form h5 {
+  border-bottom: solid var(--boja2) 2px;
+}
+
+.filteri form span {
+  float: left;
+}
+
+.malakartica {
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover;
+  border-radius: 50% !important;
+  box-shadow: black;
+
+  -webkit-transform: scale(1) !important;
+  transform: scale(1) !important;
+  -webkit-transition: 1s ease-in-out !important;
+  transition: 1s ease-in-out !important;
+  cursor: pointer !important;
+}
+
+.ostaloprikaz {
+	border: none !important;
+}
+
+.malakartica:hover {
+  -webkit-transform: scale(1.2) !important;
+  transform: scale(1.2) !important;
+  transition-duration: 0.3s !important;
+}
+
+.thumbnail-border-color {
+  border: #36261e;
+}
+
+.intro {
+  background: var(--glavnaboja);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-text {
+  text-align: center;
+}
+
+.slider {
+  background: var(--sliderboja);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  transform: translateY(100%);
+}
+
+.tttext {
+  color: var(--velikitextboja);
+  font-size: 3em !important;
+  font-family: test;
+  text-align: center;
+}
+
+.hide {
+  background: var(--glavnaboja);
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
+.wid {
+  margin-top: 250px !important;
+  width: 100% !important;
+}
+
+.appear3 {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+}
+
+.appear3.inview {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.page .loginpopover {
+  display: none;
+}
+
+#addon-wrapping {
+  background-color: var(--boja2);
+  color: var(--bojaslova);
+}
+
+.dodavanjeobjekata table {
+  border: 2px solid var(--glavnaboja);
+  margin: 0;
+}
+
+.dodavanjeobjekata table td {
+  width: 50%;
+}
+
+#opistextarea {
+  height: 200px;
+  resize: none;
+}
+
+.dodajobjbotun,
+.resetobjbotun {
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  font-size: 30px !important;
+}
+.dodajobjbotun:hover,
+.resetobjbotun:hover {
+  -webkit-filter: brightness(90%);
+}
+
+.glavnastranica li {
+  margin: 0;
+  padding: 0;
+}
+
+#google_translate_element {
+  margin-top: 50px;
+}
+
+.opis {
+  margin: 0px !important;
+}
+
+.povisekar {
+  margin: 5% !important;
+}
+
+
+#smooth-scroll {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+
+
+.accordion-body, .accordion-flush .accordion-item .accordion-button{ 
+  background-color: #f5f5dd !important;
+}
+
+.try{
+  font-family: test !important;
+  margin: auto;
+  margin-left: 5%;
+  font-size: 2rem;
+}
+
+
+
+.accord-text{
+    font-size: 1.5rem;
+    font-family: "Josefin Sans", sans-serif !important;
+}
+
+
