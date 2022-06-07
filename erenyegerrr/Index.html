@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="CSS.css" />
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<title>Animal Shelter Binky</title>
+
+	<link rel="icon" href=".\slikezazivotinje\logo3.png" type="image/x-icon">
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+
+	<div class="page">
+
+		<div class="sidebar">
+			<div class="sidebar-header">
+
+				<button class="button naglavnustr" style="margin-top: 25px;">
+					<p class="BotunSlova"><b><i class="fas fa-home"></i> <span>Main Page</span></b></p>
+				</button>
+				<button class="button pasiprikaz" style="margin-top: 200px;">
+					<p class="BotunSlova"><b><i class="fas fa-dog"></i> <span>Dogs</span></b></p>
+				</button>
+				<button class="button mackeprikaz" style="margin-top: 40px;">
+					<p class="BotunSlova"><b><i class="fas fa-cat"></i> <span>Cats</span></b></p>
+				</button>
+				<button class="button papigeprikaz" style="margin-top: 40px;">
+					<p class="BotunSlova"><b><i class='fas fa-crow'></i> <span>Parrots</span></b></p>
+				</button>
+				<button class="button kuniciprikaz" style="margin-top: 40px;">
+					<p class="BotunSlova"><b><i class="fas fa-carrot"></i> <span>Bunnies</span></b></p>
+				</button>
+				<button class="button ostaloprikaz" style="margin-top: 40px;">
+					<p class="BotunSlova"><b><i class="fas fa-ellipsis-h"></i> <span>Other</span></b></p>
+				</button>
+				<p id="google_translate_element"></p>
+
+			</div>
+		</div>
+
+		<nav class="navbar navbar-expand-xl navigationBar">
+			<div class="container-fluid">
+				<button id="sidebarToggle" class="btn sidebarToggle">
+					<i class="fas fa-bars"></i>
+				</button>
+
+				<button class="btn login navbar-nav ms-auto" data-bs-toggle="popover" title="Login" data-bs-content=''
+					data-bs-placement="left">
+					<i class="fas fa-sign-in-alt"></i>
+				</button>
+			</div>
+		</nav>
+
+
+		<div class="content">
+			
+				<div class="container-fluid glavnastranica">
+					
+					<div class="row">
+						<div class="parallax hover11"></div>
+						<div class="centered"><img src="./slikezazivotinje/logo3.png" class="img-fluid"></div>
+
+					</div>
+					<div class="row povisekar">
+						<div class="col-lg-12">
+							<div>
+								<p class="title ">Search Visit Adopt</p>
+							</div>
+						</div>
+					</div>
+					<div class="row rowkar hide-mobile">
+						<div class="col-lg-3">
+							<img src="slikezazivotinje/malakarticapas.jpg" data-aos="fade-up"
+								class="img-thumbnail malakartica prikaz pasiprikaz">
+						</div>
+						<div class=" col-lg-3">
+							<img src="slikezazivotinje/malakarticamaca.jpg" data-aos="fade-up"
+								class="img-thumbnail malakartica prikaz mackeprikaz">
+						</div>
+						<div class=" col-lg-3">
+							<img src="slikezazivotinje/malakarticazeko.jpg" data-aos="fade-up"
+								class="img-thumbnail malakartica prikaz kuniciprikaz">
+						</div>
+
+						<div class=" col-lg-3">
+							<img src="slikezazivotinje/malakarticapapiga.jpg" data-aos="fade-up"
+								class="img-thumbnail malakartica prikaz papigeprikaz">
+						</div>
+
+					</div>
+
+					<div class="row rowkar hide-mobile">
+						<div class=" col-lg-12">
+							<img src="slikezazivotinje/malakarticamore.png" data-aos="fade-in"
+								class="img-thumbnail malakartica prikaz ostaloprikaz">
+						</div>
+
+					</div>
+
+
+
+					<div id="carouselExampleControls" class="carousel slide show-mobile" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="slikezazivotinje/malakarticapas.jpg"
+									class="img-thumbnail malakartica prikaz pasiprikaz">
+							</div>
+							<div class="carousel-item">
+								<img src="slikezazivotinje/malakarticamaca.jpg"
+									class="img-thumbnail malakartica prikaz mackeprikaz">
+							</div>
+							<div class="carousel-item">
+								<img src="slikezazivotinje/malakarticazeko.jpg"
+									class="img-thumbnail malakartica prikaz kuniciprikaz">
+							</div>
+							<div class="carousel-item">
+								<img src="slikezazivotinje/malakarticapapiga.jpg"
+									class="img-thumbnail malakartica prikaz papigeprikaz">
+							</div>
+							<div class="carousel-item">
+								<img src="slikezazivotinje/malakarticamore.png"
+									class="img-thumbnail malakartica prikaz ostaloprikaz">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<div class="row">
+						<div class="parallax-smol  hover12"></div>
+					</div>
+
+					<div class="row pre_ara" data-aos="fade-right">
+						<center>
+							<div class="ara row">
+								<div class="howit col-lg-5">
+									<div>
+										<center>
+											<p class="title align-middle">HOW IT <br> WORKS</p>
+										</center>
+									</div>
+								</div>
+								<div class="text2 col-lg-7">
+									<h1 style="margin-bottom: 10%;">Steps to getting yourself a new friend:</h1><br>
+									<div class="accordion accordion-flush" id="accordkoraci">
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingOne">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+											<h2>1</h2>
+											<p class="accord_naslov try">SEARCH AND FIND A PET YOU LIKE</p>
+										  </button>
+										</h2>
+										<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordkoraci">
+										  <div class="accordion-body accord-text">
+											Look through the site and find an animal you like! Make sure to choose the best pet for your type of living.
+										  </div>
+										</div>
+									  </div>
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingTwo">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+											<h2>2</h2>
+											<p class="try">BOOK A VISIT</p>
+										  </button>
+										</h2>
+										<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordkoraci">
+										  <div class="accordion-body accord-text">
+											Book a visit 7 days in advance! We will ensure that no one takes the chosen animal before your visit!
+										  </div>
+										</div>
+									  </div>
+									  <div class="accordion-item">
+										<h2 class="accordion-header" id="flush-headingThree">
+										  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+											<h2>3</h2>
+											<p class="try">COME AND MEET US</p>
+										  </button>
+										</h2>
+										<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordkoraci">
+										  <div class="accordion-body accord-text">
+											We're excited to meet you! You'll learn a lot about the animals in our shelter and we'll help you make the right decision!
+											<h1 style="margin-top: 10% !important;">Working time:</h5>
+											<p>MON-FRI: 08:00-19:00</p>
+											<p>SAT-SUN: 08:00-15:00</p>
+										  </div>
+										</div>
+									  </div>
+									</div>
+								</div>
+							</div>
+						</center>
+					</div>
+
+
+					<div class="row pre_ara" data-aos="fade-right">
+						<center>
+							<div class="ara row hide-mobile-smol">
+								<div class="text1 col-lg-7">
+									<h4>Animal Shelter Binky is a non-profit organization* settled in Split that is
+										commited
+										to saving animals and giving them a new home. Animal Shelter Binky currently
+										consists of 12 hardworking volunteers.</h4>
+									<h4>The brains behind the project are <i>Ammar Ibrahimović</i> and <i>Marin
+											Boban</i>
+										who are happy that the project turned out so well.</h4>
+									<h4>We want to thank you for your support and donations. This wouldn't be possible
+										without each and every one of you!</h4>
+									<p>*the organization is purely fictional</p>
+								</div>
+
+								<div class="aboutus col-lg-5">
+									<center>
+										<p class="title">ABOUT<br>US</p>
+									</center>
+								</div>
+							</div>
+						</center>
+
+
+
+						<center>
+							<div class="ara row show-mobile-smol">
+
+								<div class="aboutus col-lg-5">
+									<center>
+										<p class="title">ABOUT<br>US</p>
+									</center>
+								</div>
+
+
+								<div class="text1 col-lg-7">
+									<h4>Animal Shelter Binky is a non-profit organization* settled in Split that is
+										commited
+										to saving animals and giving them a new home. Animal Shelter Binky currently
+										consists of 12 hardworking volunteers.</h4>
+									<h4>The brains behind the project are <i>Ammar Ibrahimović</i> and <i>Marin
+											Boban</i>
+										who are happy that the project turned out so well.</h4>
+									<h4>We want to thank you for your support and donations. This wouldn't be possible
+										without each and every one of you!</h4>
+									<p>*the organization is purely fictional</p>
+								</div>
+
+
+							</div>
+						</center>
+					</div>
+					
+					
+							
+					
+
+					
+
+
+				</div>
+			
+	
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="intro">
+							<div class="intro-text">
+								<h1 class="hide">
+									<span class="tttext">Search</span>
+								</h1>
+								<h1 class="hide">
+									<span class="tttext">Visit</span>
+								</h1>
+								<h1 class="hide">
+									<span class="tttext">Adopt</span>
+								</h1>
+							</div>
+						</div>
+						<div class="slider"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid prikzivotinja">
+				<div class="row">
+					<div class="col-lg-12 title">
+						<h1>SHELTERED ANIMALS</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">Neki sa strane</div>
+					<div class="col-lg-6 ispisobjekata"></div>
+					<div class="col-lg-3 filteri">
+						<form>
+							<div class="input-group flex-nowrap">
+								<span class="input-group-text" id="addon-wrapping">Name/Breed</span>
+								<input type="text" class="form-control imesearch" placeholder="e.g. Cuni"
+									aria-describedby="addon-wrapping">
+							</div>
+
+							</br>
+							<h5>Gender</h5>
+							<div class="form-check">
+								<label>
+									<span>Male</span>
+									<input class="form-check-input" type="checkbox" value="M" id="Male" name="spolovi"
+										checked>
+								</label>
+							</div>
+
+							<div class="form-check">
+								<label>
+									<span>Female</span>
+									<input class="form-check-input" type="checkbox" value="F" id="Female" name="spolovi"
+										checked>
+								</label>
+							</div>
+
+							</br>
+							<h5>Age</h5>
+
+							<label for="min">Min:</label>
+							<input type="number" id="min" name="min" min="1" max="20" value="1">
+							</br>
+							<label for="max">Max:</label>
+							<input type="number" id="max" name="max" min="1" max="20" value="20">
+
+							</br></br>
+							<h5>Size</h5>
+
+							<div class="form-check">
+								<label>
+									<span>Small</span>
+									<input class="form-check-input" type="checkbox" value="S" id="Small" name="velicina"
+										checked>
+								</label>
+							</div>
+
+							<div class="form-check">
+								<label>
+									<span>Medium</span>
+									<input class="form-check-input" type="checkbox" value="M" id="Medium"
+										name="velicina" checked>
+								</label>
+							</div>
+
+							<div class="form-check">
+								<label>
+									<span>Large</span>
+									<input class="form-check-input" type="checkbox" value="L" id="Large" name="velicina"
+										checked>
+								</label>
+							</div>
+
+							</br>
+							<h5>Activity</h5>
+
+							<div class="form-check">
+								<label>
+									<span>Lazy</span>
+									<input class="form-check-input" type="checkbox" value="Lazy" id="Lijen"
+										name="aktivnost" checked>
+								</label>
+							</div>
+
+							<div class="form-check">
+								<label>
+									<span>Calm</span>
+									<input class="form-check-input" type="checkbox" value="Calm" id="Miran"
+										name="aktivnost" checked>
+								</label>
+							</div>
+
+							<div class="form-check">
+								<label>
+									<span>Active</span>
+									<input class="form-check-input" type="checkbox" value="Active" id="Aktivan"
+										name="aktivnost" checked>
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid dodavanjeobjekata">
+				<form action="#" id="dodajforma">
+					<div class="row">
+						<div class="col-lg-4">
+
+							<select class="form-select zivkategorija" aria-label="ziv" required>
+
+								<option selected disabled hidden value="">Choose category</option>
+								<option value="pas">Dog</option>
+								<option value="macka">Cat</option>
+								<option value="papiga">Parrot</option>
+								<option value="kunic">Bunny</option>
+								<option value="ostalo">Other</option>
+
+							</select></br>
+
+							<input type="text" class="form-control imeziv" placeholder="Name of animal"
+								aria-describedby="addon-wrapping" required>
+							<input type="text" class="form-control vrstaziv" placeholder="Breed of animal"
+								aria-describedby="addon-wrapping" required></br>
+
+							<table class="table">
+								<tr>
+									<td>
+										<h5>Age</h5>
+									</td>
+									<td>
+										<h5>Gender</h5>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<label for="godineRange" class="form-label godinelabel"><span>1</span></label>
+										<input type="range" class="form-range" min="1" max="20" step="1"
+											id="godineRange" value="1">
+									</td>
+
+									<td>
+										<div class="form-check">
+											<label class="form-check-label" for="M">
+												Male
+												<input class="form-check-input" type="radio" name="Spolovi2" id="M">
+											</label>
+										</div>
+
+										<div class="form-check">
+											<label class="form-check-label" for="F">
+												Female
+												<input class="form-check-input" type="radio" name="Spolovi2" id="F"
+													checked>
+											</label>
+										</div>
+									</td>
+								</tr>
+							</table></br>
+
+							<select class="form-select velicinaselect" aria-label="vel" required>
+								<option selected disabled hidden value="">Choose animal size</option>
+								<option value="S">Small</option>
+								<option value="M">Medium</option>
+								<option value="L">Large</option>
+							</select>
+
+							<select class="form-select aktivnostselect" aria-label="akt" required>
+								<option selected disabled hidden value="">Choose animal activity</option>
+								<option value="Lazy">Lazy</option>
+								<option value="Calm">Calm</option>
+								<option value="Active">Active</option>
+							</select>
+
+						</div>
+
+						<div class="col-lg-4">
+							<table class="table">
+								<tr>
+									<td>
+										<h5>Vaccinated</h5>
+									</td>
+
+									<td>
+										<div class="form-check">
+											<label class="form-check-label" for="Yes">Yes
+												<input class="form-check-input" type="radio" name="Cijepljen" id="Yes">
+											</label>
+										</div>
+
+
+										<div class="form-check">
+											<label class="form-check-label" for="No">No
+												<input class="form-check-input" type="radio" name="Cijepljen" id="No"
+													checked>
+											</label>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<h5>Castrated</h5>
+									</td>
+
+									<td>
+										<div class="form-check">
+											<label class="form-check-label" for="Yes">Yes
+												<input class="form-check-input" type="radio" name="Kastriran" id="Yes">
+											</label>
+										</div>
+
+										<div class="form-check">
+											<label class="form-check-label" for="No">No
+												<input class="form-check-input" type="radio" name="Kastriran" id="No"
+													checked>
+											</label>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>
+										<h5>Chipped</h5>
+									</td>
+
+									<td>
+										<div class="form-check">
+											<label class="form-check-label" for="Yes">Yes
+												<input class="form-check-input" type="radio" name="Cipiran" id="Yes">
+											</label>
+										</div>
+
+										<div class="form-check">
+											<label class="form-check-label" for="No">No
+												<input class="form-check-input" type="radio" name="Cipiran" id="No"
+													checked>
+											</label>
+										</div>
+									</td>
+
+								</tr>
+							</table>
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="form-floating">
+								<textarea class="form-control" placeholder="Enter description" id="opistextarea"
+									required></textarea>
+								<label for="opistextarea">Description</label>
+							</div></br>
+
+							<input type="text" class="form-control bojaziv" placeholder="Animal color"
+								aria-describedby="addon-wrapping" required></br>
+
+							<div class="input-group mb-3">
+								<input type="file" class="form-control" id="fileUpload"
+									accept=".jpg, .jpeg, .png, .jfif" required>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="row">
+
+						<div class="col-lg-4"></div>
+
+						<div class="col-lg-4">
+							<h3 class="added"></h3>
+							<button type="submit" class="btn btn-primary dodajobjbotun">Add</button></br>
+							<button class="btn btn-primary resetobjbotun">Reset</button>
+						</div>
+
+						<div class="col-lg-4"></div>
+
+					</div>
+
+				</form>
+			</div>
+
+
+			<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel"></h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="slika"></div>
+							<div class="opis">
+								<table class="table">
+									<thead>
+										<tr>
+											<th scope="col">Vaccinated</th>
+											<th scope="col">Castrated</th>
+											<th scope="col">Chipped</th>
+										</tr>
+										<tr>
+											<td class="cijep"></td>
+											<td class="kas"></td>
+											<td class="cip"></td>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+						<div class="modal-footer">
+
+							<div class="accordion accordion-flush" id="rezervirajforma">
+								<div class="accordion-item">
+									<h2 class="accordion-header" id="flush-heading">
+										<button class="accordion-button collapsed" type="button"
+											data-bs-toggle="collapse" data-bs-target="#flush-collapse"
+											aria-expanded="false" aria-controls="flush-collapse">
+											Book a visit
+										</button>
+									</h2>
+									<div id="flush-collapse" class="accordion-collapse collapse"
+										aria-labelledby="flush-heading" data-bs-parent="#rezervirajforma">
+										<div class="accordion-body">
+											<form id="contact-form">
+												<input type="hidden" name="contact_number">
+
+												<div class="input-group mb-3">
+													<span class="input-group-text" id="basic-addon1">Name:</span>
+													<input type="text" class="form-control" placeholder="e.g. John"
+														name="user_name" aria-label="Username"
+														aria-describedby="basic-addon1">
+												</div>
+
+												<div class="input-group mb-3">
+													<span class="input-group-text" id="basic-addon2">E-mail:</span>
+													<input type="email" class="form-control"
+														placeholder="example@example.com" name="user_email"
+														aria-label="Username" aria-describedby="basic-addon2">
+												</div>
+
+												<div class="input-group mb-3">
+													<span class="input-group-text" id="basic-addon3">Date:</span>
+													<input class="form-control" id="datepicker"
+														placeholder="click here!" name="date_selected"
+														aria-label="Username" aria-describedby="basic-addon3">
+												</div>
+
+												<button type="submit" class="btn btn-primary">Confirm</button>
+
+												<p id="sent"></p>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row footer" style="margin-top: 10%;">
+				<footer class="text-center text-white">
+					<!-- Grid container -->
+					<div class="container pt-4">
+						<!-- Section: Social media -->
+						<section class="mb-4">
+							<!-- Facebook -->
+							<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+								data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+							<!-- Twitter -->
+							<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+								data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+							<!-- Google -->
+							<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+								data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+							<!-- Instagram -->
+							<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+								data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+							<!-- Linkedin -->
+							<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+								data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+							<!-- Github -->
+							<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+								data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+						</section>
+						<!-- Section: Social media -->
+					</div>
+					<!-- Grid container -->
+
+					<div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+						© 2022 Made by: Ammar Ibrahimović & Marin Boban
+					</div>
+				</footer>
+			</div>
+
+			<div class="row loginpopover">
+				<div class="col-lg-12">
+					<input type="text" class="form-control username" placeholder="Username"
+						aria-describedby="addon-wrapping">
+					<input type="password" class="form-control password" placeholder="Password"
+						aria-describedby="addon-wrapping"></br>
+					<button type="button" class="btn btn-primary loginbutton">Log in</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			// https://dashboard.emailjs.com/admin/integration
+			emailjs.init('JvBl1e1xRSJfyu0-M');
+		})();
+	</script>
+	<script type="text/javascript">
+		window.onload = function () {
+			document.getElementById('contact-form').addEventListener('submit', function (event) {
+				event.preventDefault();
+				$("#sent").text("Sending...")
+				// generate a five digit number for the contact_number variable
+				this.contact_number.value = Math.random() * 100000 | 0;
+				// these IDs from the previous steps
+				emailjs.sendForm('service_pi21j7f', 'template_0kgyeo8', this)
+					.then(function () {
+						$("#sent").text("E-mail sent!")
+					}, function (error) {
+						$("#sent").text(JSON.stringify(error))
+					});
+			});
+		}
+	</script>
+
+	<script type="text/javascript">
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+		}
+	</script>
+
+	<script type="text/javascript"
+		src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+		</script>
+
+
+	<script src="imgtobase64.js"></script>
+	<script src="zivotinje.js"></script>
+	<script src="JavaSc.js"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
+		integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration: 2000,
+			once: true,
+		});
+	</script>
+
+</body>
+
+</html>
